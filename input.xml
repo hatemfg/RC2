@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<RS>
+    <Humain>
+        <Asiatique lien = 'is_a' sens = '+' parent = 'Humain'>
+            <Chinois lien = 'is_a' sens = '+' parent = 'Asiatique'>
+                <Sautrelle lien = 'mange' sens = '-' parent = 'Chinois'>
+                    <Insecte lien = 'is_a' sens = '-' parent = 'Sautrelle'/>
+                </Sautrelle>
+            </Chinois>
+            <Vietnamien lien = 'is_a' sens = '+' parent = 'Asiatique'>
+                <Riz lien = 'mange' sens = '-' parent = 'Vietnamien'/>
+            </Vietnamien>
+        </Asiatique>
+        <Europeen lien="is_a" sens = '+' parent = 'Humain'>
+            <Francais lien = "is_a" sens = '+' parent = 'Europeen'>
+                <Escargot lien = 'mange' sens = '-' parent = 'Francais'/>
+            </Francais>
+        </Europeen>
+        <Maghrebin lien = 'is_a' sens = '+' parent = 'Humain'>
+            <Algerien lien = 'is_a' sens = '+' parent = 'Maghrebin'>
+                <Couscous lien = 'mange' sens = '-' parent = 'Algerien'/>
+            </Algerien>
+            <Marocain lien = 'is_a' sens = '+' parent = 'Maghrebin'>
+                <Couscous lien = 'mange' sens = '-' parent = 'Marocain'/>
+                <Harira lien = 'mange' sens = '-' parent = 'Marocain'/>
+            </Marocain>
+        </Maghrebin>
+    </Humain>
+</RS>

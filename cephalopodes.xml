@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<RS>
+    <Moyen_de_transport>
+        <Vehicule lien = "is_a" sens ='+' parent ='Moyen_de_transport'>
+            <Poids_lourd lien = "is_a" sens = '+' parent = 'Vehicule'>
+                <Semi_remorque lien="is_a" sens = '+' parent = "Poids_lourd">
+                    <Iveco lien = "is_a" sens = "+" parent = "Semi_remorque">
+                        <Diesel lien = "Consomme" sens ='-' parent="Iveco">
+                            <Polluant lien="is_a" sens="-" parent="Diesel">
+                                <Carburant lien="is_a" sens="+" parent="Polluant"/>
+                            </Polluant>
+                        </Diesel>
+                    </Iveco>
+                </Semi_remorque>
+                <Camion lien="is_a" sens="+" parent="Poids_lourd">
+                    <MAN lien="is_a" sens="+" parent="Camion">
+                        <Diesel lien = "Consomme" sens ='-' parent="MAN">
+                            <Polluant lien="is_a" sens="-" parent="Diesel">
+                                <Carburant lien="is_a" sens="+" parent="Polluant"/>
+                            </Polluant>
+                        </Diesel>
+                    </MAN>
+                </Camion>
+            </Poids_lourd>
+            <Vehicule_leger lien="is_a" sens="+" parent="Vehicule">
+                <deux_quatre lien="is_a" sens="+" parent="Vehicule_leger">
+                    <Clio lien="is_a" sens="+" parent="deux_quatre"/>
+                    <Trois_huite lien="is_a" sens="+" parent="deux_quatre"/>
+                </deux_quatre>
+                <quatre_quatre lien="is_a" sens="+" parent="Vehicule_leger">
+                    <Q5 lien="is_a" sens="+" parent="quatre_quatre">
+                        <Diesel lien = "Consomme" sens ='-' parent="Q5">
+                            <Polluant lien="is_a" sens="-" parent="Diesel">
+                                <Carburant lien="is_a" sens="+" parent="Polluant"/>
+                            </Polluant>
+                        </Diesel>
+                    </Q5>
+                    <Landrover lien="is_a" sens="+" parent="quatre_quatre">
+                        <Bio lien = "Consomme" sens ='-' parent="Landrover">
+                            <Non_polluant lien="is_a" sens="-" parent="Bio">
+                                <Carburant lien="is_a" sens="+" parent="Non_polluant"/>
+                            </Non_polluant>
+                        </Bio>
+                    </Landrover>
+                    <Touareg lien="is_a" sens="+" parent="quatre_quatre">
+                        <Essence lien = "Consomme" sens ='-' parent="Touareg">
+                            <Polluant lien="is_a" sens="-" parent="Essence">
+                                <Carburant lien="is_a" sens="+" parent="Polluant"/>
+                            </Polluant>
+                        </Essence>
+                    </Touareg>
+                </quatre_quatre>
+            </Vehicule_leger>
+        </Vehicule>
+    </Moyen_de_transport>
+</RS>
